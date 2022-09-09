@@ -1,0 +1,179 @@
+/*C20*/SET SCHEMA PUBLIC
+drop table if exists EtdJPA CASCADE 
+drop table if exists ProfJPA CASCADE 
+drop table if exists RdvJPA CASCADE 
+drop table if exists UserJPA CASCADE 
+drop sequence hibernate_sequence if exists
+create sequence hibernate_sequence start with 1 increment by 1
+create table EtdJPA (anneeScol integer not null, id bigint not null, primary key (id))
+create table ProfJPA (matiere varchar(255), id bigint not null, primary key (id))
+create table RdvJPA (idRdv bigint not null, date timestamp, time time, etudiant_id bigint, prof_id bigint, primary key (idRdv))
+create table UserJPA (id bigint not null, email varchar(255), name varchar(255), primary key (id))
+alter table EtdJPA add constraint FKcwncojfu30o79xtq40b1mq6ry foreign key (id) references UserJPA
+alter table ProfJPA add constraint FKbjgysbq9e8cyvylhxp8a3vjim foreign key (id) references UserJPA
+alter table RdvJPA add constraint FK2g06tdccnq4x3rnwxmgq44d5h foreign key (etudiant_id) references EtdJPA
+alter table RdvJPA add constraint FK5sdua7l8sfkam3n8l85csk8rx foreign key (prof_id) references ProfJPA
+DISCONNECT
+/*C22*/SET SCHEMA PUBLIC
+drop table if exists EtdJPA CASCADE 
+drop table if exists ProfJPA CASCADE 
+drop table if exists RdvJPA CASCADE 
+drop table if exists UserJPA CASCADE 
+drop sequence hibernate_sequence if exists
+create sequence hibernate_sequence start with 1 increment by 1
+create table EtdJPA (anneeScol integer not null, id bigint not null, primary key (id))
+create table ProfJPA (matiere varchar(255), id bigint not null, primary key (id))
+create table RdvJPA (idRdv bigint not null, date timestamp, time time, etudiant_id bigint, prof_id bigint, primary key (idRdv))
+create table UserJPA (id bigint not null, email varchar(255), name varchar(255), primary key (id))
+alter table EtdJPA add constraint FKcwncojfu30o79xtq40b1mq6ry foreign key (id) references UserJPA
+alter table ProfJPA add constraint FKbjgysbq9e8cyvylhxp8a3vjim foreign key (id) references UserJPA
+alter table RdvJPA add constraint FK2g06tdccnq4x3rnwxmgq44d5h foreign key (etudiant_id) references EtdJPA
+alter table RdvJPA add constraint FK5sdua7l8sfkam3n8l85csk8rx foreign key (prof_id) references ProfJPA
+DISCONNECT
+/*C23*/SET SCHEMA PUBLIC
+drop table if exists EtdJPA CASCADE 
+drop table if exists ProfJPA CASCADE 
+drop table if exists RdvJPA CASCADE 
+drop table if exists UserJPA CASCADE 
+drop sequence hibernate_sequence if exists
+create sequence hibernate_sequence start with 1 increment by 1
+create table EtdJPA (anneeScol integer not null, id bigint not null, primary key (id))
+create table ProfJPA (matiere varchar(255), id bigint not null, primary key (id))
+create table RdvJPA (idRdv bigint not null, date timestamp, time time, etudiant_id bigint, prof_id bigint, primary key (idRdv))
+create table UserJPA (id bigint not null, email varchar(255), name varchar(255), primary key (id))
+alter table EtdJPA add constraint FKcwncojfu30o79xtq40b1mq6ry foreign key (id) references UserJPA
+alter table ProfJPA add constraint FKbjgysbq9e8cyvylhxp8a3vjim foreign key (id) references UserJPA
+alter table RdvJPA add constraint FK2g06tdccnq4x3rnwxmgq44d5h foreign key (etudiant_id) references EtdJPA
+alter table RdvJPA add constraint FK5sdua7l8sfkam3n8l85csk8rx foreign key (prof_id) references ProfJPA
+DISCONNECT
+/*C24*/SET SCHEMA PUBLIC
+drop table if exists EtdJPA CASCADE 
+drop table if exists ProfJPA CASCADE 
+drop table if exists RdvJPA CASCADE 
+drop table if exists UserJPA CASCADE 
+drop sequence hibernate_sequence if exists
+create sequence hibernate_sequence start with 1 increment by 1
+create table EtdJPA (anneeScol integer not null, id bigint not null, primary key (id))
+create table ProfJPA (matiere varchar(255), id bigint not null, primary key (id))
+create table RdvJPA (idRdv bigint not null, date timestamp, time time, etudiant_id bigint, prof_id bigint, primary key (idRdv))
+create table UserJPA (id bigint not null, email varchar(255), name varchar(255), primary key (id))
+alter table EtdJPA add constraint FKcwncojfu30o79xtq40b1mq6ry foreign key (id) references UserJPA
+alter table ProfJPA add constraint FKbjgysbq9e8cyvylhxp8a3vjim foreign key (id) references UserJPA
+alter table RdvJPA add constraint FK2g06tdccnq4x3rnwxmgq44d5h foreign key (etudiant_id) references EtdJPA
+alter table RdvJPA add constraint FK5sdua7l8sfkam3n8l85csk8rx foreign key (prof_id) references ProfJPA
+DISCONNECT
+/*C25*/SET SCHEMA PUBLIC
+drop table if exists EtdJPA CASCADE 
+drop table if exists ProfJPA CASCADE 
+drop table if exists RdvJPA CASCADE 
+drop table if exists UserJPA CASCADE 
+drop sequence hibernate_sequence if exists
+create sequence hibernate_sequence start with 1 increment by 1
+create table EtdJPA (anneeScol integer not null, id bigint not null, primary key (id))
+create table ProfJPA (matiere varchar(255), id bigint not null, primary key (id))
+create table RdvJPA (idRdv bigint not null, date timestamp, time time, etudiant_id bigint, prof_id bigint, primary key (idRdv))
+create table UserJPA (id bigint not null, email varchar(255), name varchar(255), primary key (id))
+alter table EtdJPA add constraint FKcwncojfu30o79xtq40b1mq6ry foreign key (id) references UserJPA
+alter table ProfJPA add constraint FKbjgysbq9e8cyvylhxp8a3vjim foreign key (id) references UserJPA
+alter table RdvJPA add constraint FK2g06tdccnq4x3rnwxmgq44d5h foreign key (etudiant_id) references EtdJPA
+alter table RdvJPA add constraint FK5sdua7l8sfkam3n8l85csk8rx foreign key (prof_id) references ProfJPA
+INSERT INTO USERJPA VALUES(1,NULL,NULL)
+INSERT INTO PROFJPA VALUES('lrgo',1)
+ALTER SEQUENCE PUBLIC.HIBERNATE_SEQUENCE RESTART WITH 2
+COMMIT
+DISCONNECT
+/*C26*/SET SCHEMA PUBLIC
+drop table if exists RdvJPA CASCADE 
+drop table if exists UserJPA CASCADE 
+drop sequence hibernate_sequence if exists
+create sequence hibernate_sequence start with 1 increment by 1
+create table RdvJPA (idRdv bigint not null, date timestamp, time time, etudiant_id bigint, prof_id bigint, primary key (idRdv))
+create table UserJPA (DTYPE varchar(31) not null, id bigint not null, email varchar(255), name varchar(255), anneeScol integer, matiere varchar(255), primary key (id))
+alter table RdvJPA add constraint FKatl3frnlin84bm7lx3cfy7imf foreign key (etudiant_id) references UserJPA
+alter table RdvJPA add constraint FKlrj6odfbajxnsg3bppyucp8n2 foreign key (prof_id) references UserJPA
+INSERT INTO USERJPA VALUES('ProfJPA',1,NULL,NULL,NULL,'Algo')
+INSERT INTO USERJPA VALUES('ProfJPA',2,NULL,NULL,NULL,'Reseaux')
+INSERT INTO USERJPA VALUES('EtdJPA',3,NULL,NULL,2026,NULL)
+INSERT INTO USERJPA VALUES('EtdJPA',4,NULL,NULL,2028,NULL)
+INSERT INTO USERJPA VALUES('ProfJPA',5,NULL,NULL,NULL,'lrgo')
+ALTER SEQUENCE PUBLIC.HIBERNATE_SEQUENCE RESTART WITH 6
+COMMIT
+DISCONNECT
+/*C27*/SET SCHEMA PUBLIC
+drop table if exists RdvJPA CASCADE 
+drop table if exists UserJPA CASCADE 
+drop sequence hibernate_sequence if exists
+create sequence hibernate_sequence start with 1 increment by 1
+create table RdvJPA (idRdv bigint not null, date timestamp, time time, etudiant_id bigint, prof_id bigint, primary key (idRdv))
+create table UserJPA (DTYPE varchar(31) not null, id bigint not null, email varchar(255), name varchar(255), anneeScol integer, matiere varchar(255), primary key (id))
+alter table RdvJPA add constraint FKatl3frnlin84bm7lx3cfy7imf foreign key (etudiant_id) references UserJPA
+alter table RdvJPA add constraint FKlrj6odfbajxnsg3bppyucp8n2 foreign key (prof_id) references UserJPA
+INSERT INTO USERJPA VALUES('ProfJPA',1,NULL,NULL,NULL,'Algo')
+INSERT INTO USERJPA VALUES('ProfJPA',2,NULL,NULL,NULL,'Reseaux')
+INSERT INTO USERJPA VALUES('EtdJPA',3,NULL,NULL,2026,NULL)
+INSERT INTO USERJPA VALUES('EtdJPA',4,NULL,NULL,2028,NULL)
+INSERT INTO USERJPA VALUES('ProfJPA',5,NULL,NULL,NULL,'lArgo')
+ALTER SEQUENCE PUBLIC.HIBERNATE_SEQUENCE RESTART WITH 6
+COMMIT
+DISCONNECT
+/*C28*/SET SCHEMA PUBLIC
+drop table if exists RdvJPA CASCADE 
+drop table if exists UserJPA CASCADE 
+drop sequence hibernate_sequence if exists
+create sequence hibernate_sequence start with 1 increment by 1
+create table RdvJPA (idRdv bigint not null, date timestamp, time time, etudiant_id bigint, prof_id bigint, primary key (idRdv))
+create table UserJPA (DTYPE varchar(31) not null, id bigint not null, email varchar(255), name varchar(255), anneeScol integer, matiere varchar(255), primary key (id))
+alter table RdvJPA add constraint FKatl3frnlin84bm7lx3cfy7imf foreign key (etudiant_id) references UserJPA
+alter table RdvJPA add constraint FKlrj6odfbajxnsg3bppyucp8n2 foreign key (prof_id) references UserJPA
+DISCONNECT
+/*C29*/SET SCHEMA PUBLIC
+drop table if exists RdvJPA CASCADE 
+drop table if exists UserJPA CASCADE 
+drop sequence hibernate_sequence if exists
+create sequence hibernate_sequence start with 1 increment by 1
+create table RdvJPA (idRdv bigint not null, date timestamp, time time, etudiant_id bigint, prof_id bigint, primary key (idRdv))
+create table UserJPA (DTYPE varchar(31) not null, id bigint not null, email varchar(255), name varchar(255), anneeScol integer, matiere varchar(255), primary key (id))
+alter table RdvJPA add constraint FKatl3frnlin84bm7lx3cfy7imf foreign key (etudiant_id) references UserJPA
+alter table RdvJPA add constraint FKlrj6odfbajxnsg3bppyucp8n2 foreign key (prof_id) references UserJPA
+INSERT INTO USERJPA VALUES('ProfJPA',1,NULL,NULL,NULL,'lArgo')
+INSERT INTO USERJPA VALUES('ProfJPA',2,NULL,NULL,NULL,'Algo')
+INSERT INTO USERJPA VALUES('ProfJPA',3,NULL,NULL,NULL,'Reseaux')
+INSERT INTO USERJPA VALUES('EtdJPA',4,NULL,NULL,2026,NULL)
+INSERT INTO USERJPA VALUES('EtdJPA',5,NULL,NULL,2028,NULL)
+ALTER SEQUENCE PUBLIC.HIBERNATE_SEQUENCE RESTART WITH 6
+COMMIT
+DISCONNECT
+/*C30*/SET SCHEMA PUBLIC
+drop table if exists RdvJPA CASCADE 
+drop table if exists UserJPA CASCADE 
+drop sequence hibernate_sequence if exists
+create sequence hibernate_sequence start with 1 increment by 1
+create table RdvJPA (idRdv bigint not null, date timestamp, time time, etudiant_id bigint, prof_id bigint, primary key (idRdv))
+create table UserJPA (DTYPE varchar(31) not null, id bigint not null, email varchar(255), name varchar(255), anneeScol integer, filiere varchar(255), matiere varchar(255), primary key (id))
+alter table RdvJPA add constraint FKatl3frnlin84bm7lx3cfy7imf foreign key (etudiant_id) references UserJPA
+alter table RdvJPA add constraint FKlrj6odfbajxnsg3bppyucp8n2 foreign key (prof_id) references UserJPA
+INSERT INTO USERJPA VALUES('ProfJPA',1,NULL,NULL,NULL,NULL,'lArgo')
+INSERT INTO USERJPA VALUES('ProfJPA',2,NULL,NULL,NULL,NULL,'Algo')
+INSERT INTO USERJPA VALUES('ProfJPA',3,NULL,NULL,NULL,NULL,'Reseaux')
+INSERT INTO USERJPA VALUES('EtdJPA',4,NULL,NULL,2026,'informatique',NULL)
+INSERT INTO USERJPA VALUES('EtdJPA',5,NULL,NULL,2028,'informatique',NULL)
+ALTER SEQUENCE PUBLIC.HIBERNATE_SEQUENCE RESTART WITH 6
+COMMIT
+DISCONNECT
+/*C31*/SET SCHEMA PUBLIC
+drop table if exists RdvJPA CASCADE 
+drop table if exists UserJPA CASCADE 
+drop sequence hibernate_sequence if exists
+create sequence hibernate_sequence start with 1 increment by 1
+create table RdvJPA (idRdv bigint not null, date timestamp, time time, etudiant_id bigint, prof_id bigint, primary key (idRdv))
+create table UserJPA (DTYPE varchar(31) not null, id bigint not null, email varchar(255), name varchar(255), anneeScol integer, filiere varchar(255), matiere varchar(255), primary key (id))
+alter table RdvJPA add constraint FKatl3frnlin84bm7lx3cfy7imf foreign key (etudiant_id) references UserJPA
+alter table RdvJPA add constraint FKlrj6odfbajxnsg3bppyucp8n2 foreign key (prof_id) references UserJPA
+INSERT INTO USERJPA VALUES('ProfJPA',1,NULL,NULL,NULL,NULL,'lArgo')
+INSERT INTO USERJPA VALUES('ProfJPA',2,NULL,NULL,NULL,NULL,'Algo')
+INSERT INTO USERJPA VALUES('ProfJPA',3,NULL,NULL,NULL,NULL,'Reseaux')
+INSERT INTO USERJPA VALUES('EtdJPA',4,NULL,NULL,2026,'informatique',NULL)
+INSERT INTO USERJPA VALUES('EtdJPA',5,NULL,NULL,2028,'informatique',NULL)
+ALTER SEQUENCE PUBLIC.HIBERNATE_SEQUENCE RESTART WITH 6
+COMMIT
+DISCONNECT
