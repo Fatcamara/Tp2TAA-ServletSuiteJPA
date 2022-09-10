@@ -1,49 +1,22 @@
 package jpa;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-public class ProfJPA extends UserJPA{
+public class ProfJPA extends UserJPA implements Serializable {
 
-     //Long id;
-     //String name;
-    //String email;
-    String matiere;
+   private String matiere;
 
     public ProfJPA (){
         super();
     }
-    public ProfJPA (  String matiere) {
-        //this.name = nameProf;
-       // this.email = emailProf;
+    public ProfJPA (String matiere) {
+
         this.matiere = matiere;
-
     }
-
-    /**public Long getId() {
-        return id;
-    }
-
-    public void setId(Long idProf) {
-        this.id= idProf;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String nameProf) {
-        this.name = nameProf;
-    }
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String emailProf) {
-        this.email = emailProf;
-    }*/
 
     public String getMatiere() {
         return matiere;

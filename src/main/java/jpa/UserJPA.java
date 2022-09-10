@@ -1,23 +1,23 @@
 package jpa;
 import javax.persistence.*;
+import java.io.Serializable;
 import java.sql.Time;
 import java.util.Date;
 import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.Inheritance;
-
-
 import static javax.persistence.InheritanceType.JOINED;
 
 @Entity
 @Inheritance
-public class UserJPA {
+//(strategy=InheritanceType.TABLE_PER_CLASS )--> si on voulait une table par classe.
+public class UserJPA implements Serializable {
 
-     Long id;
+   private Long id;
 
-     String name;
+    private String name;
 
-     String email;
+    private String email;
 
     public UserJPA() {
     }

@@ -1,18 +1,18 @@
 package jpa;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.sql.Time;
 import java.util.Date;
 
 @Entity
-public class RdvJPA {
+public class RdvJPA implements Serializable {
 
-     Long idRdv;
+    private Long idRdv;
 
-     Date date;
+    private Date date;
 
-    Time time;
-
+   private Time time;
 
      ProfJPA prof = new ProfJPA();
 

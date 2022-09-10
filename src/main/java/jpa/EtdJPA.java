@@ -1,55 +1,26 @@
 package jpa;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-public class EtdJPA extends UserJPA {
+//@Table(name = "Etudiants")--> si on choisissait Table-per-classe ds UserJPA
+public class EtdJPA extends UserJPA implements Serializable {
 
-     //Long id;
+     private int anneeScol;
 
-     //String name;
-
-     //String email;
-
-      int anneeScol;
-
-     String filiere;
+    private String filiere;
 
     public EtdJPA (){
         super();
     }
     public EtdJPA ( int anneeScol, String filiere) {
-        //this.id = idEtd;
-        //this.name = nameEtd;
-        //this.email = emailEtd;
+
         this.anneeScol= anneeScol;
         this.filiere = filiere;
     }
-
-    /**public Long getId() {
-        return id;
-    }
-
-    public void set(Long idEtd) {
-        this.id = idEtd;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setNameEtd(String nameEtd) {
-        this.name = nameEtd;
-    }
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String emailEtd) {
-        this.email = emailEtd;
-    }*/
 
     public int getAnneeScol() {
         return anneeScol;

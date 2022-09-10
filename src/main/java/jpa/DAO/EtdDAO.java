@@ -1,4 +1,14 @@
 package jpa.DAO;
 
-public class EtdDAO extends JPADAO {
+import jpa.EtdJPA;
+import java.io.Serializable;
+
+public class EtdDAO extends JPADAO <Long, EtdJPA> {
+
+    public EtdDAO(){
+        //super(EtdJPA.class);--> don't work,why???
+        super();
+    }
 }
+
+

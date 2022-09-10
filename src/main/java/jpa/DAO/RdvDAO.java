@@ -1,4 +1,11 @@
 package jpa.DAO;
 
-public class RdvDAO extends JPADAO{
+import jpa.RdvJPA;
+
+public class RdvDAO extends JPADAO <Long, RdvJPA>{
+
+    public RdvDAO(){
+        //super(RdvJPA.class);--> don't work,why???
+        super();
+    }
 }
