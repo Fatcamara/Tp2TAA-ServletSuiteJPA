@@ -3,6 +3,7 @@ package jpa;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.sql.Time;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 @Entity
@@ -20,7 +21,7 @@ public class RdvJPA implements Serializable {
 
     public RdvJPA (){
     }
-    public RdvJPA (Long idRdv, String name, String email ) {
+    public RdvJPA (Long idRdv,Time time, Date date ) {
         this.idRdv = idRdv;
         this.date= date;
         this.time= time;
@@ -42,6 +43,14 @@ public class RdvJPA implements Serializable {
     public void setDate(Date date) {
         this.date = date;
     }
+
+
+    /**public String Date(String date) {
+        //Date date = new Date();
+        SimpleDateFormat Datee = new SimpleDateFormat("MM/dd/yyyy");
+        String stringDate = Datee.format(date);
+        return stringDate;
+    }*/
     public Time getTime() {
         return time;
     }
@@ -49,6 +58,7 @@ public class RdvJPA implements Serializable {
     public void setTime(Time name) {
         this.time = time;
     }
+
 
     @ManyToOne
        ProfJPA getProf() {
@@ -66,4 +76,7 @@ public class RdvJPA implements Serializable {
         this.etudiant = etudiant;
     }
 
+    public void setDatee(String stringDate) {
+        this.date = date;
+    }
 }

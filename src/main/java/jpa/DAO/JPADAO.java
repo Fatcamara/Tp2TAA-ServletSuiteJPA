@@ -13,12 +13,12 @@ public abstract class JPADAO <K, T extends Serializable> {
     long id;
     private Class<T> clazz;
 
-    protected EntityManager entityManager;
+    public EntityManager entityManager;
 
-    public JPADAO() {
+    public JPADAO(Class<T> clazzToSet) {
 
         this.entityManager = EntityManagerHelper.getEntityManager();
-        //this.clazz= clazzToSet;//Class<T> clazzToSet
+        this.clazz= clazzToSet;
     }
 
     public void setClazz(Class<T> clazzToSet) {
