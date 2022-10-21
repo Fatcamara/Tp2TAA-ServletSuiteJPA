@@ -14,6 +14,7 @@ import java.util.List;
 @NamedQueries(
         @NamedQuery(name="professeurs",query="select p from ProfJPA as p"))
 
+
 public class ProfJPA extends UserJPA implements Serializable {
 
    private String matiere;

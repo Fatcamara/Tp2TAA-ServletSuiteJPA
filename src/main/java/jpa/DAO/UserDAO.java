@@ -8,7 +8,6 @@ public class UserDAO extends JPADAO  <Long, UserJPA> {
 
     public UserDAO(){
             super(UserJPA.class);
-            //super();
         }
 
         public List <UserJPA> getUserWithOwnership (){

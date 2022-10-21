@@ -6,6 +6,5 @@ public class RdvDAO extends JPADAO <Long, RdvJPA>{
 
     public RdvDAO(){
         super(RdvJPA.class);
-        //super();
     }
 }
